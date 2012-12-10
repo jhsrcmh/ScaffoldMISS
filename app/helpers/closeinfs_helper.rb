@@ -1,0 +1,2 @@
+module CloseinfsHelper
+end

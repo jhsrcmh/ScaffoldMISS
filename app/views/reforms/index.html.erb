@@ -1,0 +1,35 @@
+<h1>Listing reforms</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Reformdoc</th>
+    <th>Reformmark</th>
+    <th>Reformresponse</th>
+    <th>Reformtype</th>
+    <th>User</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reforms.each do |reform| %>
+  <tr>
+    <td><%= reform.project_id %></td>
+    <td><%= link_to reform.reformdoc, :action => 'download', :filename => reform.file_path_a, :path => 'reformdoc' %></td>
+    <td><%= reform.reformmark %></td>
+	<td><%= link_to reform.reformresponse, :action => 'download', :filename => reform.file_path_b, :path => 'reformresponse'%></td>
+    <td><%= reform.reformtype %></td>
+    <td><%= reform.user_id %></td>
+    <td><%= reform.remarkinf %></td>
+    <td><%= link_to 'Show', reform %></td>
+    <td><%= link_to 'Edit', edit_reform_path(reform) %></td>
+    <td><%= link_to 'Destroy', reform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reform', new_reform_path %>

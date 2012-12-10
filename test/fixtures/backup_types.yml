@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  backuptypename: MyString
+  importance: 1
+
+two:
+  backuptypename: MyString
+  importance: 1

@@ -1,0 +1,29 @@
+<h1>Listing security_classes</h1>
+
+<table>
+  <tr>
+    <th>Securityclassname</th>
+    <th>Securityclassgrade</th>
+    <th>Securityfathername</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_classes.each do |security_class| %>
+  <tr>
+    <td><%= security_class.securityclassname %></td>
+    <td><%= security_class.securityclassgrade %></td>
+    <td><%= security_class.securityfathername %></td>
+    <td><%= security_class.remarkinf %></td>
+    <td><%= link_to 'Show', security_class %></td>
+    <td><%= link_to 'Edit', edit_security_class_path(security_class) %></td>
+    <td><%= link_to 'Destroy', security_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security class', new_security_class_path %>

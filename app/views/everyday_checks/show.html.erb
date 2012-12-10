@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @everyday_check.project_id %>
+</p>
+
+<p>
+  <b>Everydaycheck:</b>
+  <%= @everyday_check.everydaycheck_id %>
+</p>
+
+<p>
+  <b>Everydaycheckform:</b>
+  <%= @everyday_check.everydaycheckform %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @everyday_check.user_id %>
+</p>
+
+<p>
+  <b>Checktime:</b>
+  <%= @everyday_check.checktime %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @everyday_check.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_everyday_check_path(@everyday_check) %> |
+<%= link_to 'Back', everyday_checks_path %>

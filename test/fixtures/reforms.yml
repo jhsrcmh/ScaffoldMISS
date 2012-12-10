@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 1
+  reformdoc: MyString
+  reformmark: MyString
+  reformresponse: MyString
+  reformtype: 1
+  user_id: 1
+  remarkinf: MyText
+
+two:
+  project_id: 1
+  reformdoc: MyString
+  reformmark: MyString
+  reformresponse: MyString
+  reformtype: 1
+  user_id: 1
+  remarkinf: MyText

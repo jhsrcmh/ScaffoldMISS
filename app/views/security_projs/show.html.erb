@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @security_proj.name %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @security_proj.project_id %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @security_proj.detail %>
+</p>
+
+<p>
+  <b>Ifpass:</b>
+  <%= @security_proj.ifpass %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @security_proj.user_id %>
+</p>
+
+<p>
+  <b>Security proj type:</b>
+  <%= @security_proj.security_proj_type_id %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @security_proj.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_security_proj_path(@security_proj) %> |
+<%= link_to 'Back', security_projs_path %>

@@ -1,0 +1,51 @@
+<!--重构，文件可上传-->
+<%= form_for(@closeinf, :html=>{:enctype=>'multipart/form-data'}) do |f| %>
+  <% if @closeinf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@closeinf.errors.count, "error") %> prohibited this closeinf from being saved:</h2>
+
+      <ul>
+      <% @closeinf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <!-- 项目域-->
+  <div class="field">
+  	<%= collection_select :project, :projname, Project.all, :id, :projname%>
+  </div>
+  
+  <!-- 用户域-->
+  <div class="field">
+  	<%= collection_select :user, :username, User.all, :id, :username%>
+  </div>
+  <!-- 交底方案分类域-->
+  <div class="field">
+  	<%= collection_select :close_type, :closetypename, CloseType.all, :id, :closetypename %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Closeinf %><br />
+    <%= f.text_field :Closeinf %>
+  </div>
+  <!--提交文件域，重构代码以此进行-->
+  <div class="field">
+  	<%= f.label :closedtl%>
+  	<%= file_field_tag(:img_file, :size=>'33')%>
+  </div>
+  <div class="field">
+    <%= f.label :closetime %><br />
+    <%= f.datetime_select :closetime %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

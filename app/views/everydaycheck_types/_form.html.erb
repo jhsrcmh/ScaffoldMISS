@@ -1,0 +1,29 @@
+<%= form_for(@everydaycheck_type) do |f| %>
+  <% if @everydaycheck_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@everydaycheck_type.errors.count, "error") %> prohibited this everydaycheck_type from being saved:</h2>
+
+      <ul>
+      <% @everydaycheck_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :everydaychecktype %><br />
+    <%= f.text_field :everydaychecktype %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing worklogs</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Logdoc</th>
+    <th>Time</th>
+    <th>Place</th>
+    <th>User</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @worklogs.each do |worklog| %>
+  <tr>
+    <td><%= worklog.project_id %></td>
+    <td><%= worklog.logdoc %></td>
+    <td><%= worklog.time %></td>
+    <td><%= worklog.place %></td>
+    <td><%= worklog.user_id %></td>
+    <td><%= worklog.remarkinf %></td>
+    <td><%= link_to 'Show', worklog %></td>
+    <td><%= link_to 'Edit', edit_worklog_path(worklog) %></td>
+    <td><%= link_to 'Destroy', worklog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Worklog', new_worklog_path %>

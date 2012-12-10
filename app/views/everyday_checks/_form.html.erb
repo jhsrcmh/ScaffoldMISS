@@ -1,0 +1,42 @@
+<%= form_for(@everyday_check, :html=>{:enctype=>'multipart/form-data'}) do |f| %>
+  <% if @everyday_check.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@everyday_check.errors.count, "error") %> prohibited this everyday_check from being saved:</h2>
+
+      <ul>
+      <% @everyday_check.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+  	<%= f.label :projectname %>
+  	<%= collection_select :project, :projname, Project.all, :id, :projname%>
+  </div>
+  <div class="field">
+  	<%= f.label :everydaycheck_type %>
+  	<%= collection_select :everydaycheck_type, :everydaychecktype, EverydaycheckType.all, :id, :everydaychecktype %>
+  </div>
+  <div class="field">
+  	<%= :username%>
+  	<%= collection_select :user, :username, User.all, :id, :username%>
+  </div>
+    <!--提交文件域，提交每日检查表单,重构代码以此进行-->
+  <div class="field">
+  	<%= f.label :everydaycheckform%>
+  	<%= file_field_tag(:img_file, :size=>'33')%>
+  </div>
+  <div class="field">
+    <%= f.label :checktime %><br />
+    <%= f.time_select :checktime %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

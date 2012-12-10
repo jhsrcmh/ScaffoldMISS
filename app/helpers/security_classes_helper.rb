@@ -1,0 +1,2 @@
+module SecurityClassesHelper
+end

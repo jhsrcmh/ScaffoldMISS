@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Securityclassname:</b>
+  <%= @security_class.securityclassname %>
+</p>
+
+<p>
+  <b>Securityclassgrade:</b>
+  <%= @security_class.securityclassgrade %>
+</p>
+
+<p>
+  <b>Securityfathername:</b>
+  <%= @security_class.securityfathername %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @security_class.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_security_class_path(@security_class) %> |
+<%= link_to 'Back', security_classes_path %>

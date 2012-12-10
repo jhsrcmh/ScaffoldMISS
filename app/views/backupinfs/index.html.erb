@@ -1,0 +1,33 @@
+<h1>Listing backupinfs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Backinf</th>
+    <th>Backupclass</th>
+    <th>Project</th>
+    <th>User</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @backupinfs.each do |backupinf| %>
+  <tr>
+    <td><%= backupinf.name %></td>
+    <td><%= link_to backupinf.backinf, :action => 'download', :filename=>backupinf.file_path%></td>
+    <td><%= backupinf.backupclass_id %></td>
+    <td><%= backupinf.project_id %></td>
+    <td><%= backupinf.user_id %></td>
+    <td><%= backupinf.remarkinf %></td>
+    <td><%= link_to 'Show', backupinf %></td>
+    <td><%= link_to 'Edit', edit_backupinf_path(backupinf) %></td>
+    <td><%= link_to 'Destroy', backupinf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Backupinf', new_backupinf_path %>

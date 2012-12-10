@@ -1,0 +1,52 @@
+<%= form_for(@security, :html=>{:enctype=>'multipart/form-data'}) do |f| %>
+  <% if @security.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security.errors.count, "error") %> prohibited this security from being saved:</h2>
+
+      <ul>
+      <% @security.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <!-- 项目域-->
+  <div class="field">
+  	<%= collection_select :project, :projname, Project.all, :id, :projname%>
+  </div>
+  
+  <!-- 用户域-->
+  <div class="field">
+  	<%= collection_select :user, :username, User.all, :id, :username%>
+  </div>
+  <!--安全资料分类域-->
+  <div class="field">
+  	<%= collection_select :security_class, :securityclassname, SecurityClass.all, :id, :securityclassname%>
+  </div>
+  <!--提交文件域，提交每日检查表单,重构代码以此进行-->
+  <div class="field">
+  	<%= f.label :securitydtl%>
+  	<%= file_field_tag(:img_file, :size=>'33')%>
+  </div>
+  <div class="field">
+    <%= f.label :ifpass %><br />
+    <%= f.number_field :ifpass %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

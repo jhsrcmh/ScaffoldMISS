@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Backuptypename:</b>
+  <%= @backup_type.backuptypename %>
+</p>
+
+<p>
+  <b>Importance:</b>
+  <%= @backup_type.importance %>
+</p>
+
+
+<%= link_to 'Edit', edit_backup_type_path(@backup_type) %> |
+<%= link_to 'Back', backup_types_path %>

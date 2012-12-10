@@ -1,0 +1,35 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Projname</th>
+    <th>Projinf</th>
+    <th>Security</th>
+    <th>Ifon</th>
+    <th>User</th>
+    <th>Time</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.projname %></td>
+    <td><%= project.projinf %></td>
+    <td><%= project.security_id %></td>
+    <td><%= project.ifon %></td>
+    <td><%= project.user_id %></td>
+    <td><%= project.time %></td>
+    <td><%= project.remarkinf %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>

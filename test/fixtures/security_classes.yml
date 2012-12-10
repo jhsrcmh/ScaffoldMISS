@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  securityclassname: MyString
+  securityclassgrade: 1
+  securityfathername: MyString
+  remarkinf: MyText
+
+two:
+  securityclassname: MyString
+  securityclassgrade: 1
+  securityfathername: MyString
+  remarkinf: MyText

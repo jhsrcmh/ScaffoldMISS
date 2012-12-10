@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @worklog.project_id %>
+</p>
+
+<p>
+  <b>Logdoc:</b>
+  <%= @worklog.logdoc %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @worklog.time %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @worklog.place %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @worklog.user_id %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @worklog.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_worklog_path(@worklog) %> |
+<%= link_to 'Back', worklogs_path %>

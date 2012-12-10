@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @backupinf.name %>
+</p>
+
+<p>
+  <b>Backinf:</b>
+  <%= @backupinf.backinf %>
+</p>
+
+<p>
+  <b>Backupclass:</b>
+  <%= @backupinf.backupclass_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @backupinf.project_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @backupinf.user_id %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @backupinf.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_backupinf_path(@backupinf) %> |
+<%= link_to 'Back', backupinfs_path %>

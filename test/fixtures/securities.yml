@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  project_id: 1
+  securityclass_id: 1
+  securitydtl: MyString
+  ifpass: 1
+  time: 2012-12-05 20:02:03
+  user_id: 1
+  remarkinf: MyText
+
+two:
+  name: MyString
+  project_id: 1
+  securityclass_id: 1
+  securitydtl: MyString
+  ifpass: 1
+  time: 2012-12-05 20:02:03
+  user_id: 1
+  remarkinf: MyText

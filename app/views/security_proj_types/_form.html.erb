@@ -1,0 +1,29 @@
+<%= form_for(@security_proj_type) do |f| %>
+  <% if @security_proj_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security_proj_type.errors.count, "error") %> prohibited this security_proj_type from being saved:</h2>
+
+      <ul>
+      <% @security_proj_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :securityprojtypename %><br />
+    <%= f.text_field :securityprojtypename %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

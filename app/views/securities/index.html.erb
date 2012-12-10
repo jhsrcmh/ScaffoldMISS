@@ -1,0 +1,37 @@
+<h1>Listing securities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Project</th>
+    <th>Securityclass</th>
+    <th>Securitydtl</th>
+    <th>Ifpass</th>
+    <th>Time</th>
+    <th>User</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @securities.each do |security| %>
+  <tr>
+    <td><%= security.name %></td>
+    <td><%= security.project_id %></td>
+    <td><%= security.securityclass_id %></td>
+    <td><%= link_to security.securitydtl, :action => 'download', :filename => security.file_path %></td>
+    <td><%= security.ifpass %></td>
+    <td><%= security.time %></td>
+    <td><%= security.user_id %></td>
+    <td><%= security.remarkinf %></td>
+    <td><%= link_to 'Show', security %></td>
+    <td><%= link_to 'Edit', edit_security_path(security) %></td>
+    <td><%= link_to 'Destroy', security, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security', new_security_path %>

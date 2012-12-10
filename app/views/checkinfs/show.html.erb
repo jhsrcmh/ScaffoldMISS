@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @checkinf.project_id %>
+</p>
+
+<p>
+  <b>Checkclass:</b>
+  <%= @checkinf.checkclass_id %>
+</p>
+
+<p>
+  <b>Checkform:</b>
+  <%= @checkinf.checkform %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @checkinf.user_id %>
+</p>
+
+<p>
+  <b>Checktime:</b>
+  <%= @checkinf.checktime %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @checkinf.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_checkinf_path(@checkinf) %> |
+<%= link_to 'Back', checkinfs_path %>

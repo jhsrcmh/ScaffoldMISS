@@ -1,0 +1,27 @@
+<h1>Listing close_types</h1>
+
+<table>
+  <tr>
+    <th>Closetypename</th>
+    <th>Priority</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @close_types.each do |close_type| %>
+  <tr>
+    <td><%= close_type.closetypename %></td>
+    <td><%= close_type.priority %></td>
+    <td><%= close_type.remarkinf %></td>
+    <td><%= link_to 'Show', close_type %></td>
+    <td><%= link_to 'Edit', edit_close_type_path(close_type) %></td>
+    <td><%= link_to 'Destroy', close_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Close type', new_close_type_path %>

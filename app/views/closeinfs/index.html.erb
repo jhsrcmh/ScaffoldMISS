@@ -1,0 +1,37 @@
+<h1>Listing closeinfs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Closeinf</th>
+    <th>Project</th>
+    <th>Closedtl</th>
+    <th>Closetime</th>
+    <th>User</th>
+    <th>Closeinf type</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @closeinfs.each do |closeinf| %>
+  <tr>
+    <td><%= closeinf.name %></td>
+    <td><%= closeinf.Closeinf %></td>
+    <td><%= closeinf.project_id %></td>
+    <td><%= link_to closeinf.closedtl, :action => 'download', :filename=>closeinf.file_path%></td>
+    <td><%= closeinf.closetime %></td>
+    <td><%= closeinf.user_id %></td>
+    <td><%= closeinf.closeinf_type_id %></td>
+    <td><%= closeinf.remarkinf %></td>
+    <td><%= link_to 'Show', closeinf %></td>
+    <td><%= link_to 'Edit', edit_closeinf_path(closeinf) %></td>
+    <td><%= link_to 'Destroy', closeinf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Closeinf', new_closeinf_path %>

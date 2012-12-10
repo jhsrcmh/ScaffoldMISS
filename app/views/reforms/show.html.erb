@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @reform.project_id %>
+</p>
+
+<p>
+  <b>Reformdoc:</b>
+  <%= @reform.reformdoc %>
+</p>
+
+<p>
+  <b>Reformmark:</b>
+  <%= @reform.reformmark %>
+</p>
+
+<p>
+  <b>Reformresponse:</b>
+  <%= @reform.reformresponse %>
+</p>
+
+<p>
+  <b>Reformtype:</b>
+  <%= @reform.reformtype %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @reform.user_id %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @reform.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_reform_path(@reform) %> |
+<%= link_to 'Back', reforms_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@security_class) do |f| %>
+  <% if @security_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security_class.errors.count, "error") %> prohibited this security_class from being saved:</h2>
+
+      <ul>
+      <% @security_class.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :securityclassname %><br />
+    <%= f.text_field :securityclassname %>
+  </div>
+  <div class="field">
+    <%= f.label :securityclassgrade %><br />
+    <%= f.number_field :securityclassgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :securityfathername %><br />
+    <%= f.text_field :securityfathername %>
+  </div>
+  <div class="field">
+    <%= f.label :remarkinf %><br />
+    <%= f.text_area :remarkinf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

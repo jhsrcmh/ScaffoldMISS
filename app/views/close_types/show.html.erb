@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Closetypename:</b>
+  <%= @close_type.closetypename %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @close_type.priority %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @close_type.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_close_type_path(@close_type) %> |
+<%= link_to 'Back', close_types_path %>

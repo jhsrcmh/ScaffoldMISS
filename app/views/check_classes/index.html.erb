@@ -1,0 +1,27 @@
+<h1>Listing check_classes</h1>
+
+<table>
+  <tr>
+    <th>Checkclassname</th>
+    <th>Priority</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @check_classes.each do |check_class| %>
+  <tr>
+    <td><%= check_class.checkclassname %></td>
+    <td><%= check_class.priority %></td>
+    <td><%= check_class.remarkinf %></td>
+    <td><%= link_to 'Show', check_class %></td>
+    <td><%= link_to 'Edit', edit_check_class_path(check_class) %></td>
+    <td><%= link_to 'Destroy', check_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Check class', new_check_class_path %>

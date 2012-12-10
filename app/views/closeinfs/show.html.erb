@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @closeinf.name %>
+</p>
+
+<p>
+  <b>Closeinf:</b>
+  <%= @closeinf.Closeinf %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @closeinf.project_id %>
+</p>
+
+<p>
+  <b>Closedtl:</b>
+  <%= @closeinf.closedtl %>
+</p>
+
+<p>
+  <b>Closetime:</b>
+  <%= @closeinf.closetime %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @closeinf.user_id %>
+</p>
+
+<p>
+  <b>Closeinf type:</b>
+  <%= @closeinf.closeinf_type_id %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @closeinf.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_closeinf_path(@closeinf) %> |
+<%= link_to 'Back', closeinfs_path %>

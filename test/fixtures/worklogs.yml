@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 1
+  logdoc: MyString
+  time: 2012-12-05 19:42:51
+  place: MyString
+  user_id: 1
+  remarkinf: MyText
+
+two:
+  project_id: 1
+  logdoc: MyString
+  time: 2012-12-05 19:42:51
+  place: MyString
+  user_id: 1
+  remarkinf: MyText

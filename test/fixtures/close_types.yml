@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  closetypename: MyString
+  priority: 1
+  remarkinf: MyText
+
+two:
+  closetypename: MyString
+  priority: 1
+  remarkinf: MyText

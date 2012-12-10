@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 1
+  everydaycheck_id: 1
+  everydaycheckform: MyString
+  user_id: 1
+  checktime: 2012-12-05 19:46:12
+  remarkinf: MyText
+
+two:
+  project_id: 1
+  everydaycheck_id: 1
+  everydaycheckform: MyString
+  user_id: 1
+  checktime: 2012-12-05 19:46:12
+  remarkinf: MyText

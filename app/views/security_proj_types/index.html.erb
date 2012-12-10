@@ -1,0 +1,27 @@
+<h1>Listing security_proj_types</h1>
+
+<table>
+  <tr>
+    <th>Securityprojtypename</th>
+    <th>Priority</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_proj_types.each do |security_proj_type| %>
+  <tr>
+    <td><%= security_proj_type.securityprojtypename %></td>
+    <td><%= security_proj_type.priority %></td>
+    <td><%= security_proj_type.remarkinf %></td>
+    <td><%= link_to 'Show', security_proj_type %></td>
+    <td><%= link_to 'Edit', edit_security_proj_type_path(security_proj_type) %></td>
+    <td><%= link_to 'Destroy', security_proj_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security proj type', new_security_proj_type_path %>

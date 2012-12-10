@@ -1,0 +1,2 @@
+module EverydaycheckTypesHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing everydaycheck_types</h1>
+
+<table>
+  <tr>
+    <th>Everydaychecktype</th>
+    <th>Priority</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @everydaycheck_types.each do |everydaycheck_type| %>
+  <tr>
+    <td><%= everydaycheck_type.everydaychecktype %></td>
+    <td><%= everydaycheck_type.priority %></td>
+    <td><%= everydaycheck_type.remarkinf %></td>
+    <td><%= link_to 'Show', everydaycheck_type %></td>
+    <td><%= link_to 'Edit', edit_everydaycheck_type_path(everydaycheck_type) %></td>
+    <td><%= link_to 'Destroy', everydaycheck_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Everydaycheck type', new_everydaycheck_type_path %>

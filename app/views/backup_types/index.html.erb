@@ -1,0 +1,25 @@
+<h1>Listing backup_types</h1>
+
+<table>
+  <tr>
+    <th>Backuptypename</th>
+    <th>Importance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @backup_types.each do |backup_type| %>
+  <tr>
+    <td><%= backup_type.backuptypename %></td>
+    <td><%= backup_type.importance %></td>
+    <td><%= link_to 'Show', backup_type %></td>
+    <td><%= link_to 'Edit', edit_backup_type_path(backup_type) %></td>
+    <td><%= link_to 'Destroy', backup_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Backup type', new_backup_type_path %>

@@ -1,0 +1,23 @@
+<h1>Listing reform_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reform_types.each do |reform_type| %>
+  <tr>
+    <td><%= reform_type.name %></td>
+    <td><%= link_to 'Show', reform_type %></td>
+    <td><%= link_to 'Edit', edit_reform_type_path(reform_type) %></td>
+    <td><%= link_to 'Destroy', reform_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reform type', new_reform_type_path %>

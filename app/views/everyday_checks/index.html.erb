@@ -1,0 +1,33 @@
+<h1>Listing everyday_checks</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Everydaycheck</th>
+    <th>Everydaycheckform</th>
+    <th>User</th>
+    <th>Checktime</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>  
+<% @everyday_checks.each do |everyday_check| %>
+  <tr>
+    <td><%= everyday_check.project_id %></td>
+    <td><%= everyday_check.everydaycheck_id %></td>
+    <td><%= everyday_check.everydaycheckform %></td>
+    <td><%= link_to everyday_check.everydaycheckform, :action => 'download', :filename => everyday_check.file_path%></td>
+    <td><%= everyday_check.user_id %></td>
+    <td><%= everyday_check.checktime %></td>
+    <td><%= everyday_check.remarkinf %></td>
+    <td><%= link_to 'Show', everyday_check %></td>
+    <td><%= link_to 'Edit', edit_everyday_check_path(everyday_check) %></td>
+    <td><%= link_to 'Destroy', everyday_check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Everyday check', new_everyday_check_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Checkclassname:</b>
+  <%= @check_class.checkclassname %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @check_class.priority %>
+</p>
+
+<p>
+  <b>Remarkinf:</b>
+  <%= @check_class.remarkinf %>
+</p>
+
+
+<%= link_to 'Edit', edit_check_class_path(@check_class) %> |
+<%= link_to 'Back', check_classes_path %>

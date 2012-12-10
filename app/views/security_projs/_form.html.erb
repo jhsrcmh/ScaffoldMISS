@@ -1,0 +1,47 @@
+<%= form_for(@security_proj, :html=>{:enctype=>'multipart/form-data'}) do |f| %>
+<% if @security_proj.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@security_proj.errors.count, "error") %> prohibited this security_proj from being saved:</h2>
+
+	<ul>
+		<% @security_proj.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<div class="field">
+	<%= f.label :name %>
+	<br />
+	<%= f.text_field :name %>
+</div>
+<div class="field">
+	<%= collection_select :project, :projname, Project.all, :id, :projname%>
+</div>
+<div class="field">
+	<%= collection_select :user, :username, User.all, :id, :username%>
+</div>
+<div class="field">
+	<%= collection_select :security_proj_types, :securityprojtypename, SecurityProjType.all, :id, :securityprojtypename%>
+</div>
+<div class="field">
+  	<%= f.label :detail%>
+  	<%= file_field_tag(:img_file, :size=>'33')%>
+  </div>
+<div class="field">
+	<%= f.label :ifpass %>
+	<br />
+	<%= f.number_field :ifpass %>
+</div>
+<div class="field">
+	<%= f.label :remarkinf %>
+	<br />
+	<%= f.text_area :remarkinf %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

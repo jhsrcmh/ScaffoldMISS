@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  Closeinf: MyString
+  project_id: 1
+  closedtl: MyString
+  closetime: 2012-12-06 13:54:21
+  user_id: 1
+  closeinf_type_id: 1
+  remarkinf: MyText
+
+two:
+  name: MyString
+  Closeinf: MyString
+  project_id: 1
+  closedtl: MyString
+  closetime: 2012-12-06 13:54:21
+  user_id: 1
+  closeinf_type_id: 1
+  remarkinf: MyText

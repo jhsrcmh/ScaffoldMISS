@@ -1,0 +1,35 @@
+<h1>Listing security_projs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Project</th>
+    <th>Detail</th>
+    <th>Ifpass</th>
+    <th>User</th>
+    <th>Security proj type</th>
+    <th>Remarkinf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_projs.each do |security_proj| %>
+  <tr>
+    <td><%= security_proj.name %></td>
+    <td><%= security_proj.project_id %></td>
+    <td><%= link_to security_proj.detail, :action => 'download', :filename => security_proj.file_path %></td>
+    <td><%= security_proj.ifpass %></td>
+    <td><%= security_proj.user_id %></td>
+    <td><%= security_proj.security_proj_type_id %></td>
+    <td><%= security_proj.remarkinf %></td>
+    <td><%= link_to 'Show', security_proj %></td>
+    <td><%= link_to 'Edit', edit_security_proj_path(security_proj) %></td>
+    <td><%= link_to 'Destroy', security_proj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security proj', new_security_proj_path %>
